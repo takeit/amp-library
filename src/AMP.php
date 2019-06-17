@@ -447,7 +447,11 @@ class AMP
             $pass = (new $pass_name($qp_branch, $this->context, $this->validation_result, $this->grouped_validation_result, $this->parsed_rules, $this->options));
 
             // Run the pass
-            $pass->pass();
+            try {
+                $pass->pass();
+            } catch (\Throwable $e) {
+                // invalid tag, ignore
+            }
             $this->action_taken = array_merge($this->action_taken, $pass->getWarnings());
         }
 
