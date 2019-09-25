@@ -212,7 +212,7 @@ class AMP
         }
 
         // What is the server url e.g. http://www.cnn.com (note no trailing /)
-        if (empty($options['server_url']) && !empty($_SERVER['SERVER_NAME'])) {
+        if (isset($options['server_url']) && empty($options['server_url']) && !empty($_SERVER['SERVER_NAME'])) {
             $server_url = $this->options['request_scheme'] . $_SERVER['SERVER_NAME'];
             if (!empty($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] != '80') {
                 $server_url .= ':' . $_SERVER['SERVER_PORT'];
