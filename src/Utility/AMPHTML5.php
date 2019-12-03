@@ -43,10 +43,10 @@ class AMPHTML5 extends HTML5
      * @param array $options
      * @return \DOMDocument
      */
-    public function parse(InputStream $inputstream, array $options = [])
+    public function parse($inputstream, array $options = [])
     {
         // User options override default options in $this->options
-        $final_options = array_merge($this->options, $options);
+        $final_options = array_merge($this->getOptions(), $options);
         $amp_tree_builder = new AMPDOMTreeBuilder($inputstream, $final_options);
         $amp_tokenizer = new AMPTokenizer($amp_tree_builder);
 
