@@ -100,6 +100,7 @@ class Context
         'amp-sidebar' => 'https://cdn.ampproject.org/v0/amp-sidebar-0.1.js',
         'amp-accordion' => 'https://cdn.ampproject.org/v0/amp-accordion-0.1.js',
         'amp-sticky-ad' => 'https://cdn.ampproject.org/v0/amp-sticky-ad-1.0.js',
+        'amp-web-push' => 'https://cdn.ampproject.org/v0/amp-web-push-0.1.js',
         'template' => 'https://cdn.ampproject.org/v0/amp-mustache-0.1.js'
     ];
 
